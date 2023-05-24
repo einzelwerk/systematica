@@ -1,0 +1,8 @@
+export default {
+      id: "external_sprite-usage",
+      viewBox: "0 0 13 12",
+      url: "/assets/" + "C:\\projects\\sys\\src\\assets\\icons\\external_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

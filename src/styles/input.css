@@ -57,7 +57,10 @@
   }
 
   .section {
-    @apply py-24;
+    @apply py-14;
+    @screen md {
+      @apply py-24;
+    }
   }
 
   .bg-gradient-dark {
@@ -96,7 +99,7 @@
     }
 
     &--secondary {
-      @apply bg-accent-800 text-accent-500 rounded-xl transition-colors font-semibold;
+      @apply rounded-xl bg-accent-800 font-semibold text-accent-500 transition-colors;
       &:hover {
         @apply bg-accent-500 text-gray-0;
       }
@@ -115,11 +118,11 @@
   }
 
   .bg-dots {
-    position: relative;
+    @apply relative z-10;
     &:before {
       content: '';
       background-image: url('../assets/images/bg.svg');
-      @apply absolute inset-0 block h-full w-full bg-cover;
+      @apply absolute inset-0 -z-10 block h-full w-full bg-cover;
     }
   }
 

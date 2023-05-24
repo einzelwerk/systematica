@@ -3,18 +3,61 @@
     <h2 class="section-heading__title">Unsere Cases</h2>
     <p class="section-heading__desc">10+ happy clients in 3 months</p>
   </div>
-  <div class="swiper js-cases-slider max-w-4xl overflow-visible">
-    <div class="swiper-wrapper">
-      {% for items in [1,2,3,4,5,6,7,8,9] %}
-      <div class="swiper-slide">
-        <div class="flex flex-col">
-          <video class="block pointer-events-none" poster="{% static './images/about.jpg' %}">
-            <source src="{% static './media/case.mp4' %}" type="video/mp4" />
-          </video>
+  <div class="container">
+    <div class="swiper js-cases-slider">
+      <div class="swiper-wrapper mb-8 md:mb-12">
+        {% for items in [1,2,3,4,5,6,7,8,9] %}
+        <div class="swiper-slide">
+          <div class="flex flex-col gap-7">
+            <div
+              class="aspect-h-3 aspect-w-5 overflow-hidden rounded-xl"
+              x-data="{state : false}"
+              x-on:mouseleave="state = false; $el.querySelector('video').play()"
+              x-on:mouseover="state = true; $el.querySelector('video').play()"
+            >
+              <div class="flex flex-col">
+                <div class="absolute bottom-3 left-3 z-10 flex gap-1">
+                  <span class="rounded-xl bg-gray-0 px-3 py-2 text-sm font-medium text-gray-900"> €1290 </span>
+                  <span class="rounded-xl bg-gray-0 px-3 py-2 text-sm font-medium text-gray-900"> 10 days </span>
+                </div>
+                <picture class="absolute inset-0 block h-full w-full">
+                  <img src="{% static './images/case.jpg' %}" class="h-full w-full object-cover object-top" alt="" />
+                </picture>
+                <video class="absolute inset-0 h-full w-full" x-bind:class="state ? '' : 'hidden'" preload="auto" muted>
+                  <source src="{% static './media/case.mp4' %}" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+            <div class="flex flex-col items-start gap-3 md:items-center">
+              <a href="" class="group flex items-center gap-4">
+                <span class="text-xl font-semibold">comedy-union.de</span>
+                <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                  <use xlink:href="./assets/sprite.svg#external_sprite"></use>
+                </svg>
+              </a>
+              <p class="max-w-sm md:text-center text-gray-700">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
+            </div>
+          </div>
         </div>
-      </div>
 
-      {%- endfor %}
+        {%- endfor %}
+      </div>
+      <div class="flex items-center justify-start gap-2 md:justify-center md:gap-3">
+        <button
+          class="js-prev-slider flex h-10 w-10 items-center justify-center rounded-full bg-gray-0 transition-colors hover:bg-accent-600 hover:text-gray-0 disabled:bg-gray-500 disabled:text-gray-0 md:h-12 md:w-12"
+        >
+          <svg width="24" height="24">
+            <use xlink:href="./assets/sprite.svg#arrow-r_sprite"></use>
+          </svg>
+        </button>
+        <button
+          class="js-next-slider flex h-10 w-10 items-center justify-center rounded-full bg-gray-0 transition-colors hover:bg-accent-600 hover:text-gray-0 disabled:bg-gray-500 disabled:text-gray-0 md:h-12 md:w-12"
+        >
+          <svg width="24" height="24" class="rotate-180">
+            <use xlink:href="./assets/sprite.svg#arrow-r_sprite"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>
