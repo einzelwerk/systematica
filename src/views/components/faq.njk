@@ -1,0 +1,109 @@
+<section class="section bg-gray-100">
+  <div class="container">
+    <div class="section-heading">
+      <h2 class="section-heading__title">FAQ</h2>
+    </div>
+    <div class="mb-12 flex flex-col gap-4 md:mb-14">
+      {% for item in [1,2,3,4,5,6,7,7] %}
+      <details class="group cursor-pointer overflow-hidden rounded-xl bg-gray-0 transition-colors hover:bg-gray-200 [&_svg]:open:-rotate-180">
+        <summary class="flex select-none items-center justify-between gap-2 px-4 py-5 text-xl font-semibold md:p-8">
+          What is included in your website development package?
+          <svg width="20" height="20" class="transition-transform">
+            <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
+          </svg>
+        </summary>
+        <div class="content">
+          <p class="max-w-5xl px-4 py-5 text-lg text-gray-700 md:p-8">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tempore iste ipsa blanditiis exercitationem tempora culpa a qui incidunt
+            voluptates.
+          </p>
+        </div>
+      </details>
+      {%- endfor %}
+    </div>
+    <div class="bg-gradient-dark bg-dots flex flex-col gap-8 rounded-3xl px-4 py-5 text-gray-0 md:flex-row md:items-center md:px-20 md:py-16">
+      <div class="flex flex-col gap-4 md:gap-6">
+        <h3 class="text-3xl font-semibold md:text-4xl">Haben Sie noch Fragen?</h3>
+        <p class="text-lg md:text-xl">Schreiben Sie uns direkt. Wir sind zu vernünftigen Zeiten geöffnet und verfügbar</p>
+        <div class="mt-2 flex gap-3 md:mt-3">
+          <a
+            class="flex h-12 w-12 items-center justify-center rounded-xl bg-gray-0 text-gray-900 transition-colors hover:bg-accent-600 hover:text-gray-0"
+            href=""
+            aria-label="Link to whatsapp"
+            title="Write us to whatsapp"
+          >
+            <svg width="20" height="20">
+              <use xlink:href="./assets/sprite.svg#wa_sprite"></use>
+            </svg>
+          </a>
+          <a
+            class="flex h-12 w-12 items-center justify-center rounded-xl bg-gray-0 text-gray-900 transition-colors hover:bg-accent-600 hover:text-gray-0"
+            href=""
+            aria-label="Link to whatsapp"
+            title="Write us to whatsapp"
+          >
+            <svg width="20" height="20">
+              <use xlink:href="./assets/sprite.svg#tg_sprite"></use>
+            </svg>
+          </a>
+          <a
+            class="flex h-12 w-12 items-center justify-center rounded-xl bg-gray-0 text-gray-900 transition-colors hover:bg-accent-600 hover:text-gray-0"
+            href=""
+            aria-label="Link to whatsapp"
+            title="Write us to whatsapp"
+          >
+            <svg width="20" height="20">
+              <use xlink:href="./assets/sprite.svg#phone_sprite"></use>
+            </svg>
+          </a>
+          <a
+            class="flex h-12 w-12 items-center justify-center rounded-xl bg-gray-0 text-gray-900 transition-colors hover:bg-accent-600 hover:text-gray-0"
+            href=""
+            aria-label="Link to whatsapp"
+            title="Write us to whatsapp"
+          >
+            <svg width="20" height="20">
+              <use xlink:href="./assets/sprite.svg#email_sprite"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-6 md:hidden">
+        <div class="flex items-center gap-5">
+          <picture class="block h-24 w-24 overflow-hidden rounded-full">
+            <img src="{% static './images/manager.jpg' %}" class="h-full w-full" alt="" />
+          </picture>
+          <div class="flex flex-col gap-1">
+            <p class="text-xl font-semibold">Mark</p>
+            <p>Project-manager</p>
+          </div>
+        </div>
+        <a href="" class="btn btn--primary flex items-center justify-center gap-3 py-4">
+          <svg width="24" height="24">
+            <use xlink:href="./assets/sprite.svg#wa_sprite"></use>
+          </svg>
+          Schreiben auf WhatsApp
+        </a>
+      </div>
+      <div class="hidden md:flex">
+        <div class="relative h-72 w-72 overflow-hidden rounded-full">
+          <div class="absolute inset-x-0 bottom-6 z-10 flex flex-col gap-1">
+            <p class="text-center text-lg font-semibold">Mark</p>
+            <p class="text-center text-lg text-gray-200">Project-manager</p>
+          </div>
+          <picture class="absolute block h-full w-full">
+            <img src="{% static './images/manager-full.jpg' %}" class="block h-full w-full object-cover" alt="" />
+          </picture>
+        </div>
+        <div class="relative h-72 w-72 overflow-hidden rounded-full bg-accent-600 -ml-12 transition-transform hover:scale-105">
+          <a href="" class="absolute inset-0 z-10 flex h-full w-full flex-col items-center justify-center gap-4">
+            <svg width="40" height="40">
+              <use xlink:href="./assets/sprite.svg#wa_sprite"></use>
+            </svg>
+            <p class="text-center text-lg font-semibold max-w-[150px]">Schreiben auf WhatsApp</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

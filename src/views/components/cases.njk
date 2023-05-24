@@ -1,0 +1,20 @@
+<section class="section">
+  <div class="section-heading">
+    <h2 class="section-heading__title">Unsere Cases</h2>
+    <p class="section-heading__desc">10+ happy clients in 3 months</p>
+  </div>
+  <div class="swiper js-cases-slider max-w-4xl overflow-visible">
+    <div class="swiper-wrapper">
+      {% for items in [1,2,3,4,5,6,7,8,9] %}
+      <div class="swiper-slide">
+        <div class="flex flex-col">
+          <video class="block pointer-events-none" poster="{% static './images/about.jpg' %}">
+            <source src="{% static './media/case.mp4' %}" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+      {%- endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,8 @@
+export default {
+      id: "email_sprite-usage",
+      viewBox: "0 0 20 20",
+      url: "/assets/" + "C:\\projects\\sys\\src\\assets\\icons\\email_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

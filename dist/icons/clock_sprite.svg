@@ -1,0 +1,8 @@
+export default {
+      id: "clock_sprite-usage",
+      viewBox: "0 0 24 24",
+      url: "/assets/" + "C:\\projects\\sys\\src\\assets\\icons\\clock_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

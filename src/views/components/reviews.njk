@@ -1,0 +1,34 @@
+<section class="section bg-gray-600">
+  <div class="section-heading gap-4 container">
+    <p class="bg-gradient-lt-blue flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-gray-900">10+ zufriedene Kunden</p>
+    <h2 class="section-heading__title text-2xl text-gray-0 md:text-3xl">Die Bewertungen unserer Kunden</h2>
+  </div>
+  <div class="swiper js-reviews-slider container" id="reviews">
+    <div class="swiper-wrapper mb-8 md:mb-12">
+      {% for items in [1,2,3,4,5,6] %}
+      <div class="swiper-slide">
+        <a href="{% static './images/reviews/1.jpg' %}" class="block relative overflow-hidden rounded-xl group" data-fancybox class="block">
+          <div class="absolute w-full h-full bg-overlay bg-opacity-75 inset-0 flex items-center justify-center group-hover:opacity-100 opacity-0 transition-opacity">
+            <svg width='32' height='32'>
+              <use xlink:href='./assets/sprite.svg#zoom_sprite'></use>
+              </svg>
+          </div>
+          <img src="{% static './images/reviews/1-s.jpg' %}" class="w-full h-full object-cover" alt="" />
+        </a>
+      </div>
+      {%- endfor %}
+    </div>
+    <div class="flex items-center justify-start md:justify-center gap-2 md:gap-3">
+      <button class="h-10 w-10 md:h-12 md:w-12 bg-gray-0 flex items-center justify-center rounded-full hover:text-gray-0 hover:bg-accent-600 disabled:bg-gray-500 js-prev-slider disabled:text-gray-0 transition-colors">
+        <svg width="24" height="24">
+          <use xlink:href="./assets/sprite.svg#arrow-r_sprite"></use>
+        </svg>
+      </button>
+      <button class="h-10 w-10 md:h-12 md:w-12 bg-gray-0 flex items-center justify-center rounded-full hover:text-gray-0 hover:bg-accent-600 disabled:bg-gray-500 js-next-slider disabled:text-gray-0 transition-colors">
+        <svg width="24" height="24" class="rotate-180">
+          <use xlink:href="./assets/sprite.svg#arrow-r_sprite"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
