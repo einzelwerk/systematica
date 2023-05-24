@@ -1,0 +1,8 @@
+export default {
+      id: "zoom_sprite-usage",
+      viewBox: "0 0 32 32",
+      url: "/assets/" + "C:\\projects\\sys\\src\\assets\\icons\\zoom_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

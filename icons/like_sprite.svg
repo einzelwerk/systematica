@@ -1,0 +1,8 @@
+export default {
+      id: "like_sprite-usage",
+      viewBox: "0 0 20 20",
+      url: "/assets/" + "C:\\projects\\sys\\src\\assets\\icons\\like_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }
