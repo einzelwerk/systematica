@@ -9,14 +9,14 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const EslintWebpackPlugin = require('eslint-webpack-plugin');
 
-const isProd = process.env.NODE_ENV == 'production';
+const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
 console.log(process.env.NODE_ENV)
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: process.env.NODE_ENV || 'development',
-  entry: './index.ts',
+  entry: './index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'assets/js/[name].js',
@@ -49,15 +49,15 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new SpriteLoaderPlugin(),
     new EslintWebpackPlugin({
-      extensions: ['js', 'ts'],
-      exclude: 'node_modules , tailwind.config.js, postcss.config.js, webpack.config.js',
+      extensions: ['js'],
+      exclude: 'node_modules, webpack.config.js',
     })
 
   ],
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -108,7 +108,7 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         type: 'asset/resource',
         generator: {
-          filename:'fonts/[name][ext][query]',
+          filename: 'fonts/[name][ext][query]',
         }
       },
 

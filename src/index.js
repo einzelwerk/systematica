@@ -1,4 +1,4 @@
-import './js/App.ts';
+import './js/App';
 import './styles/input.css';
 
 

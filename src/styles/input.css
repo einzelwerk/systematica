@@ -99,7 +99,7 @@
     }
 
     &--secondary {
-      @apply rounded-xl bg-accent-800 font-semibold text-accent-500 transition-colors;
+      @apply rounded-xl bg-accent-800 font-semibold px-6 py-3 text-accent-500 transition-colors;
       &:hover {
         @apply bg-accent-500 text-gray-0;
       }
@@ -107,6 +107,9 @@
 
     &--disabled {
       @apply rounded-xl bg-accent-200 px-6 py-3 font-semibold  text-accent-600 transition-colors;
+      &:hover {
+        @apply bg-accent-500 text-gray-0;
+      }
     }
   }
 

@@ -6,7 +6,7 @@ import 'swiper/css/bundle';
 
 class Sliders {
   static cases() {
-    const root = document.querySelector('.js-cases-slider') as HTMLElement;
+    const root = document.querySelector('.js-cases-slider');
     const sliderInstance = new Swiper(root, {
       modules: [Mousewheel, Pagination, Navigation],
       init: false,
@@ -26,8 +26,8 @@ class Sliders {
       },
 
       navigation: {
-        prevEl: root.querySelector('.js-prev-slider') as HTMLElement,
-        nextEl: root.querySelector('.js-next-slider') as HTMLElement,
+        prevEl: root.querySelector('.js-prev-slider'),
+        nextEl: root.querySelector('.js-next-slider'),
       },
     });
 
@@ -35,7 +35,7 @@ class Sliders {
   }
 
   static reviews() {
-    const root = document.querySelector('.js-reviews-slider') as HTMLElement;
+    const root = document.querySelector('.js-reviews-slider');
     const sliderInstance = new Swiper(root, {
       modules: [Mousewheel, Navigation],
       init: false,
@@ -56,8 +56,8 @@ class Sliders {
       },
 
       navigation: {
-        prevEl: root.querySelector('.js-prev-slider') as HTMLElement,
-        nextEl: root.querySelector('.js-next-slider') as HTMLElement,
+        prevEl: root.querySelector('.js-prev-slider'),
+        nextEl: root.querySelector('.js-next-slider'),
       },
     });
 
@@ -65,13 +65,13 @@ class Sliders {
   }
 
   static hero() {
-    const root = document.querySelector('.js-hero-slider') as HTMLElement;
+    const root = document.querySelector('.js-hero-slider');
     const sliderInstance = new Swiper(root, {
       modules: [Mousewheel, Navigation, EffectFade, Autoplay],
       init: false,
-      
-      loop:true,
-      speed:500,
+
+      loop: true,
+      speed: 500,
       effect: 'fade',
       fadeEffect: {
         crossFade: true,
@@ -91,12 +91,35 @@ class Sliders {
 
     sliderInstance.init();
   }
+
+  static refs() {
+    const root = document.querySelector('.js-refs-slider');
+    const sliderInstance = new Swiper(root, {
+      modules: [Mousewheel, Navigation, EffectFade, Autoplay],
+      init: false,
+
+      
+      speed: 500,
+
+      slidesPerView: 2.3,
+
+      spaceBetween: 30,
+
+      mousewheel: {
+        forceToAxis: true,
+        sensitivity: 0.3,
+      },
+    });
+
+    sliderInstance.init();
+  }
 }
 
 function slidersInit() {
   Sliders.cases();
   Sliders.reviews();
   Sliders.hero();
+  Sliders.refs();
 }
 
 document.addEventListener('DOMContentLoaded', () => {

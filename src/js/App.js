@@ -1,16 +1,10 @@
 /* eslint-disable  */
-import './modules/Sliders.ts';
-import './modules/SetVariables.ts';
-import './modules/Lightgallery.ts';
+import './modules/Sliders';
+import './modules/SetVariables';
+import './modules/Lightgallery';
+import './modules/gsap';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import Alpine from 'alpinejs';
-
-declare global {
-  // eslint-disable-next-line
-  interface Window {
-    Alpine: unknown;
-  }
-}
 
 window.Alpine = Alpine;
 
@@ -19,19 +13,14 @@ Alpine.start();
 
 
 class Accordion {
-  el: HTMLDetailsElement;
-  summary: HTMLElement;
-  content: HTMLElement;
-  animation: Animation | null;
-  isClosing: boolean;
-  isExpanding: boolean;
 
-  static accordions: Accordion[] = [];
 
-  constructor(el: HTMLDetailsElement) {
+  static accordions = [];
+
+  constructor(el) {
     this.el = el;
-    this.summary = el.querySelector('summary') as HTMLElement;
-    this.content = el.querySelector('.content') as HTMLElement;
+    this.summary = el.querySelector('summary');
+    this.content = el.querySelector('.content');
 
     this.animation = null;
     this.isClosing = false;
@@ -42,7 +31,7 @@ class Accordion {
     Accordion.accordions.push(this);
   }
 
-  onClick(e: MouseEvent) {
+  onClick(e) {
     e.preventDefault();
     this.el.style.overflow = 'hidden';
 
@@ -111,7 +100,7 @@ class Accordion {
     this.animation.oncancel = () => (this.isExpanding = false);
   }
 
-  onAnimationFinish(open: boolean) {
+  onAnimationFinish(open) {
     this.el.open = open;
     this.animation = null;
     this.isClosing = false;
@@ -121,5 +110,5 @@ class Accordion {
 }
 
 document.querySelectorAll('details').forEach((el) => {
-  new Accordion(el as HTMLDetailsElement);
+  new Accordion(el);
 });

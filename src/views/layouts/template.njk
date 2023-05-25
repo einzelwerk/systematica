@@ -1,22 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
     <div class="root">
-      {% block header %}
-        {% include 'header.njk' %}
-      {% endblock %}
-      <main class="main">
-        {% block content %}{% endblock %}
-      </main>
-      {% block footer %}
-        {% include 'footer.njk' %}
-      {% endblock %}
+      {% block header %} {% include 'header.njk' %} {% endblock %}
+      <div class="smooth-wrapper">
+        <div class="smooth-content">
+          <main class="main">{% block content %}{% endblock %}</main>
+          {% block footer %} {% include 'footer.njk' %} {% endblock %}
+        </div>
+      </div>
+    </div>
+    <div class="fixed inset-0 z-50 bg-overlay">
+      <div
+        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
+      >
+        <div class="mb-3 flex justify-between">
+          <div class="flex gap-2 text-sm font-medium">
+            <div class="flex gap-1">
+              <span>1</span>
+              <span class="text-gray-700">/</span>
+              <span class="text-gray-700">4</span>
+            </div>
+            <span class="font-medium">Quiz</span>
+          </div>
+          <button>
+            <svg width="12" height="12">
+              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+            </svg>
+          </button>
+        </div>
+        <h4 class="mb-6 text-2xl font-semibold">Choose website type</h4>
+        <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class="flex">
+            <input type="radio" class="peer sr-only" id="cat-1" name="category" />
+            <label for="cat-1" class="flex flex-col gap-5 rounded-2xl border border-gray-200 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
+              <picture class="block h-12 w-12">
+                <img src="{% static './images/icon.svg' %}" alt="" class="h-full w-full object-cover" />
+              </picture>
+              <div class="flex flex-col gap-2">
+                <h4 class="text-xl font-semibold">Onepager</h4>
+                <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
+              </div>
+              <div class="flex flex-col gap-1">
+                <p class="font-semibold">Starting from €649</p>
+                <p class="text-sm">zzgl. 19% MwSt</p>
+              </div>
+            </label>
+          </div>
+          <div class="flex">
+            <input type="radio" class="peer sr-only" id="cat-2" name="category" />
+            <label for="cat-2" class="flex flex-col gap-5 rounded-2xl border border-gray-200 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
+              <picture class="block h-12 w-12">
+                <img src="{% static './images/icon.svg' %}" alt="" class="h-full w-full object-cover" />
+              </picture>
+              <div class="flex flex-col gap-2">
+                <h4 class="text-xl font-semibold">Multipager</h4>
+                <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
+              </div>
+              <div class="flex flex-col gap-1">
+                <p class="font-semibold">Starting from €1290</p>
+                <p class="text-sm">zzgl. 19% MwSt</p>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <button class="btn btn--disabled">Cancel</button>
+          <button class="btn btn--primary flex-1">Next</button>
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
+      >
+        <div class="mb-3 flex justify-between">
+          <div class="flex gap-2 text-sm font-medium">
+            <div class="flex gap-1">
+              <span>2</span>
+              <span class="text-gray-700">/</span>
+              <span class="text-gray-700">4</span>
+            </div>
+            <span class="font-medium">Quiz</span>
+          </div>
+          <button>
+            <svg width="12" height="12">
+              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+            </svg>
+          </button>
+        </div>
+        <h4 class="mb-6 text-2xl font-semibold">How many pages will be on your website?</h4>
+        <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-5">
+          {% for item in [1,2,3,4,5] %}
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="size-1" name="size" />
+            <label
+              for="size-1"
+              class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              4-6
+            </label>
+          </div>
+          {%- endfor %}
+        </div>
+        <div class="flex gap-2">
+          <button class="btn btn--disabled">Back</button>
+          <button class="btn btn--primary flex-1">Next</button>
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
+      >
+        <div class="mb-3 flex justify-between">
+          <div class="flex gap-2 text-sm font-medium">
+            <div class="flex gap-1">
+              <span>3</span>
+              <span class="text-gray-700">/</span>
+              <span class="text-gray-700">4</span>
+            </div>
+            <span class="font-medium">Quiz</span>
+          </div>
+          <button>
+            <svg width="12" height="12">
+              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+            </svg>
+          </button>
+        </div>
+        <h4 class="mb-6 text-2xl font-semibold">Choose website type</h4>
+        <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class="bg-gradient-orange-pink relative overflow-hidden rounded-2xl p-[2px]">
+            <span class="bg-gradient-orange-pink absolute right-2 top-2 rounded-lg px-3 py-2 font-semibold"> Hot </span>
+            <div class="flex rounded-2xl bg-gray-0">
+              <input type="radio" class="peer sr-only" id="cat-1" name="category" />
+              <label for="cat-1" class="flex flex-col gap-5 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
+                <picture class="block h-12 w-12">
+                  <img src="{% static './images/icon.svg' %}" alt="" class="h-full w-full object-cover" />
+                </picture>
+                <div class="flex flex-col gap-2">
+                  <h4 class="text-xl font-semibold">Individuelle</h4>
+                  <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <p class="font-semibold">Starting from €4490</p>
+                  <p class="text-sm">zzgl. 19% MwSt</p>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="flex">
+            <input type="radio" class="peer sr-only" id="cat-2" name="category" />
+            <label for="cat-2" class="flex flex-col gap-5 rounded-2xl border border-gray-200 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
+              <picture class="block h-12 w-12">
+                <img src="{% static './images/icon.svg' %}" alt="" class="h-full w-full object-cover" />
+              </picture>
+              <div class="flex flex-col gap-2">
+                <h4 class="text-xl font-semibold">Multipager</h4>
+                <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
+              </div>
+              <div class="flex flex-col gap-1">
+                <p class="font-semibold">Starting from €1290</p>
+                <p class="text-sm">zzgl. 19% MwSt</p>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <button class="btn btn--disabled">Cancel</button>
+          <button class="btn btn--primary flex-1">Next</button>
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
+      >
+        <div class="mb-3 flex justify-between">
+          <div class="flex gap-2 text-sm font-medium">
+            <div class="flex gap-1">
+              <span>4</span>
+              <span class="text-gray-700">/</span>
+              <span class="text-gray-700">4</span>
+            </div>
+            <span class="font-medium">Quiz</span>
+          </div>
+          <button>
+            <svg width="12" height="12">
+              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+            </svg>
+          </button>
+        </div>
+        <h4 class="mb-6 text-2xl font-semibold">What extras are needed?</h4>
+        <div class="mb-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {% for item in [1,2,3,4,5,6,7,8] %}
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="add-1" name="add" />
+            <label
+              for="add-1"
+              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              <span>Newsletter-Dienst (Sendinblue)</span>
+              <span>+ €99*</span>
+            </label>
+          </div>
+          {%- endfor %}
+        </div>
+        <span class="mb-5 block text-sm text-gray-700">*zzgl. 19% MwSt</span>
+        <div class="flex gap-2">
+          <button class="btn btn--disabled">Back</button>
+          <button class="btn btn--primary flex-1">See results</button>
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
+      >
+        <div class="mb-3 flex items-center justify-between">
+          <h4 class="text-2xl font-semibold">Here’s your results</h4>
+          <button>
+            <svg width="12" height="12">
+              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="mb-4">
+          <h4 class="text-xl font-semibold mb-5">References</h4>
+          <div class="swiper js-refs-slider">
+            <div class="swiper-wrapper">
+              {% for items in [1,2,3,4,5] %}
+              <div class="swiper-slide">
+                <div class="flex flex-col gap-3">
+                  <picture class="block overflow-hidden rounded-xl border border-gray-200">
+                    <img src="{% static './images/refs.jpg' %}" class="h-full w-full object-cover" alt="" />
+                  </picture>
+                  <a href="" class="group flex items-center gap-4">
+                    <span class="text-sm font-semibold">comedy-union.de</span>
+                    <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                      <use xlink:href="./assets/sprite.svg#external_sprite"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              {%- endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="-mx-8 mb-6 border-t border-gray-200 px-8 pt-6">
+          <h4 class="mb-5 text-xl font-semibold">Project estimations</h4>
+
+          <div class="grid grid-cols-1 gap-3 md:grid-cols-2">
+            <div class="flex flex-col gap-4 rounded-2xl bg-gray-100 p-4">
+              <h5 class="text-sm">Preise</h5>
+              <div class="flex items-center gap-3">
+                <span class="text-2xl font-semibold text-gray-900"> €1290 </span>
+                <span class="text-sm text-gray-700">zzgl. 19% MwSt</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4 rounded-2xl bg-gray-100 p-4">
+              <h5 class="text-sm">Timeline</h5>
+              <div class="flex items-center gap-3">
+                <span class="text-2xl font-semibold text-gray-900">Up to 10 days </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <button class="btn btn--disabled">Recalculate</button>
+          <button class="btn btn--primary flex-1">I’m ready</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
