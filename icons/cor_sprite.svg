@@ -1,0 +1,8 @@
+export default {
+      id: "cor_sprite-usage",
+      viewBox: "0 0 20 12",
+      url: "/assets/" + "C:\\projects\\sys\\src\\assets\\icons\\cor_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

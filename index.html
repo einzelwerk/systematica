@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   <script defer src="assets/js/main.js"></script><link href="main.css" rel="stylesheet"></head>
   <body>
     <div class="root">
-      
-        
+       
 
 <header class="absolute inset-x-0 z-40 text-gray-200 " x-data="{menu : false}">
   <div class="flex items-center gap-12 p-4 md:px-10 md:py-8">
@@ -42,7 +41,7 @@
       </ul>
     </nav>
     <div class="ml-auto hidden items-center gap-6 lg:flex">
-      <a href="" class="font-semibold text-gray-0 transition-colors hover:text-accent-200"> +49 999 588-35-64 </a>
+      <a href="" class="font-semibold text-gray-0 transition-colors hover:text-accent-600"> +49 999 588-35-64 </a>
       <button class="btn btn--primary">Angebot anfragen</button>
     </div>
     <div class="flex gap-1 md:hidden">
@@ -102,13 +101,13 @@
     </div>
   </div>
 </header>
-
-      
-      <main class="main">
-        
+ 
+      <div class="smooth-wrapper">
+        <div class="smooth-content">
+          <main class="main">
   <section class="bg-gradient-dark bg-dots section min-h-screen pt-header">
   <div class="container">
-    <div class="mt-8 md:mt-12 flex flex-col gap-5 md:gap-20">
+    <div class="mt-8 flex flex-col gap-5 md:mt-12 md:gap-20">
       <div class="flex max-w-6xl flex-col items-start gap-4 text-gray-0 md:mx-auto md:items-center md:gap-6">
         <div class="flex gap-2 rounded-xl bg-[#ffffff0e] px-4 py-2 text-base md:text-lg">
           <span class="text-gray-200"> schon ab </span>
@@ -127,28 +126,58 @@
             </svg>
             K.I.-LLER Features inklusive:
           </h2>
-  
-            <ul class="flex flex-col md:flex-row gap-1">
-              <li class="bg-gradient-lt-blue flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 font-semibold text-gray-900">
-                <svg width="20" height="20">
-                  <use xlink:href="./assets/sprite.svg#lighting_sprite"></use>
+
+          <ul class="flex gap-1">
+            <li class="bg-gradient-lt-blue group relative flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 font-semibold text-gray-900">
+              <span
+                class="pointer-events-none absolute bottom-full left-1/2 mb-3 w-96 -translate-x-1/2 whitespace-normal rounded-2xl bg-gray-0 px-4 py-3 text-center text-sm font-normal text-gray-700 opacity-0 transition-opacity group-hover:opacity-100"
+              >
+                Collect third-party API credentials from your users and encrypt them before they touch your infrastructure, using Inbound Relay or any
+                of our client-side SDKs.
+                <svg width="24" height="12" class="absolute bottom-1 left-1/2 -translate-x-1/2 translate-y-full">
+                  <use xlink:href="./assets/sprite.svg#cor_sprite"></use>
                 </svg>
-                Content Generator
-              </li>
-              <li class="bg-gradient-orange-pink flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 font-semibold text-gray-900">
-                <svg width="20" height="20">
-                  <use xlink:href="./assets/sprite.svg#translate_sprite"></use>
+              </span>
+              <svg width="20" height="20">
+                <use xlink:href="./assets/sprite.svg#lighting_sprite"></use>
+              </svg>
+              Content Generator
+            </li>
+            <li
+              class="bg-gradient-orange-pink group relative flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 font-semibold text-gray-900"
+            >
+              <span
+                class="pointer-events-none absolute bottom-full left-1/2 mb-3 w-96 -translate-x-1/2 whitespace-normal rounded-2xl bg-gray-0 px-4 py-3 text-center text-sm font-normal text-gray-700 opacity-0 transition-opacity group-hover:opacity-100"
+              >
+                Collect third-party API credentials from your users and encrypt them before they touch your infrastructure, using Inbound Relay or any
+                of our client-side SDKs.
+                <svg width="24" height="12" class="absolute bottom-1 left-1/2 -translate-x-1/2 translate-y-full">
+                  <use xlink:href="./assets/sprite.svg#cor_sprite"></use>
                 </svg>
-                Multilanguage
-              </li>
-              <li class="bg-gradient-yellow-pink flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 font-semibold text-gray-900">
-                <svg width="20" height="20">
-                  <use xlink:href="./assets/sprite.svg#like_sprite"></use>
+              </span>
+              <svg width="20" height="20">
+                <use xlink:href="./assets/sprite.svg#translate_sprite"></use>
+              </svg>
+              Multilanguage
+            </li>
+            <li
+              class="bg-gradient-yellow-pink group relative flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 font-semibold text-gray-900"
+            >
+              <span
+                class="pointer-events-none absolute bottom-full left-1/2 mb-3 w-96 -translate-x-1/2 whitespace-normal rounded-2xl bg-gray-0 px-4 py-3 text-center text-sm font-normal text-gray-700 opacity-0 transition-opacity group-hover:opacity-100"
+              >
+                Collect third-party API credentials from your users and encrypt them before they touch your infrastructure, using Inbound Relay or any
+                of our client-side SDKs.
+                <svg width="24" height="12" class="absolute bottom-1 left-1/2 -translate-x-1/2 translate-y-full">
+                  <use xlink:href="./assets/sprite.svg#cor_sprite"></use>
                 </svg>
-                Testimonials
-              </li>
-            </ul>
-         
+              </span>
+              <svg width="20" height="20">
+                <use xlink:href="./assets/sprite.svg#like_sprite"></use>
+              </svg>
+              Testimonials
+            </li>
+          </ul>
         </div>
       </div>
       <div class="swiper js-hero-slider w-full">
@@ -232,25 +261,25 @@
         <p class="text-lg text-gray-700 md:text-xl">We make sites that really work and solve primarily business problems</p>
         <div class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
           <div class="flex gap-3 rounded-2xl border border-gray-200 bg-gray-100 p-4 md:flex-col md:gap-4 md:p-5">
-            <picture class="block h-10 w-10">
+            <picture class="block h-10 w-10 flex-none">
               <img src="images/about/1.svg" class="h-full w-full object-contain" alt="" />
             </picture>
             <h3 class="font-semibold">Specialized website development for online success</h3>
           </div>
           <div class="flex gap-3 rounded-2xl border border-gray-200 bg-gray-100 p-4 md:flex-col md:gap-4 md:p-5">
-            <picture class="block h-10 w-10">
+            <picture class="block h-10 w-10 flex-none">
               <img src="images/about/2.svg" class="h-full w-full object-contain" alt="" />
             </picture>
             <h3 class="font-semibold">Expert marketing team for maximum reach</h3>
           </div>
           <div class="flex gap-3 rounded-2xl border border-gray-200 bg-gray-100 p-4 md:flex-col md:gap-4 md:p-5">
-            <picture class="block h-10 w-10">
+            <picture class="block h-10 w-10 flex-none">
               <img src="images/about/3.svg" class="h-full w-full object-contain" alt="" />
             </picture>
             <h3 class="font-semibold">10+ years of industry experience for your benefit</h3>
           </div>
           <div class="flex gap-3 rounded-2xl border border-gray-200 bg-gray-100 p-4 md:flex-col md:gap-4 md:p-5">
-            <picture class="block h-10 w-10">
+            <picture class="block h-10 w-10 flex-none">
               <img src="images/about/4.svg" class="h-full w-full object-contain" alt="" />
             </picture>
             <h3 class="font-semibold">Quick start solution for launching your business</h3>
@@ -265,11 +294,11 @@
 </section>
 
   <section class="section">
-  <div class="section-heading">
-    <h2 class="section-heading__title">Unsere Cases</h2>
-    <p class="section-heading__desc">10+ happy clients in 3 months</p>
-  </div>
   <div class="container">
+    <div class="section-heading">
+      <h2 class="section-heading__title">Unsere Cases</h2>
+      <p class="section-heading__desc">10+ happy clients in 3 months</p>
+    </div>
     <div class="swiper js-cases-slider">
       <div class="swiper-wrapper mb-8 md:mb-12">
         
@@ -301,7 +330,7 @@
                   <use xlink:href="./assets/sprite.svg#external_sprite"></use>
                 </svg>
               </a>
-              <p class="max-w-sm md:text-center text-gray-700">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
+              <p class="max-w-sm text-gray-700 md:text-center">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
             </div>
           </div>
         </div>
@@ -333,7 +362,7 @@
                   <use xlink:href="./assets/sprite.svg#external_sprite"></use>
                 </svg>
               </a>
-              <p class="max-w-sm md:text-center text-gray-700">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
+              <p class="max-w-sm text-gray-700 md:text-center">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
             </div>
           </div>
         </div>
@@ -365,7 +394,7 @@
                   <use xlink:href="./assets/sprite.svg#external_sprite"></use>
                 </svg>
               </a>
-              <p class="max-w-sm md:text-center text-gray-700">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
+              <p class="max-w-sm text-gray-700 md:text-center">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
             </div>
           </div>
         </div>
@@ -397,7 +426,7 @@
                   <use xlink:href="./assets/sprite.svg#external_sprite"></use>
                 </svg>
               </a>
-              <p class="max-w-sm md:text-center text-gray-700">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
+              <p class="max-w-sm text-gray-700 md:text-center">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
             </div>
           </div>
         </div>
@@ -429,7 +458,7 @@
                   <use xlink:href="./assets/sprite.svg#external_sprite"></use>
                 </svg>
               </a>
-              <p class="max-w-sm md:text-center text-gray-700">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
+              <p class="max-w-sm text-gray-700 md:text-center">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
             </div>
           </div>
         </div>
@@ -461,7 +490,7 @@
                   <use xlink:href="./assets/sprite.svg#external_sprite"></use>
                 </svg>
               </a>
-              <p class="max-w-sm md:text-center text-gray-700">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
+              <p class="max-w-sm text-gray-700 md:text-center">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
             </div>
           </div>
         </div>
@@ -493,7 +522,7 @@
                   <use xlink:href="./assets/sprite.svg#external_sprite"></use>
                 </svg>
               </a>
-              <p class="max-w-sm md:text-center text-gray-700">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
+              <p class="max-w-sm text-gray-700 md:text-center">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
             </div>
           </div>
         </div>
@@ -525,7 +554,7 @@
                   <use xlink:href="./assets/sprite.svg#external_sprite"></use>
                 </svg>
               </a>
-              <p class="max-w-sm md:text-center text-gray-700">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
+              <p class="max-w-sm text-gray-700 md:text-center">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
             </div>
           </div>
         </div>
@@ -557,7 +586,7 @@
                   <use xlink:href="./assets/sprite.svg#external_sprite"></use>
                 </svg>
               </a>
-              <p class="max-w-sm md:text-center text-gray-700">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
+              <p class="max-w-sm text-gray-700 md:text-center">Eine vollwertige Website für den Organisator von Comedy-Künstler-Konzerten</p>
             </div>
           </div>
         </div>
@@ -591,7 +620,7 @@
       </p>
     </div>
     <div class="mb-12 grid grid-cols-1 gap-4 md:mb-20 lg:grid-cols-3 lg:gap-7">
-      <div class="flex flex-col gap-4 rounded-2xl bg-gray-0 p-4 md:gap-6 md:p-6">
+      <div class="flex flex-col gap-4 pb-6 pt-4 px-4 rounded-2xl bg-gray-0 p-4 md:gap-6 md:p-6">
         <div class="flex flex-col gap-4 md:gap-6">
           <div class="flex flex-col gap-3 md:gap-4">
             <h3 class="text-lg font-semibold md:text-xl">Onepager</h3>
@@ -621,7 +650,7 @@
           </ul>
         </div>
       </div>
-      <div class="flex flex-col gap-4 rounded-2xl bg-gray-0 p-4 md:gap-6 md:p-6">
+      <div class="flex flex-col gap-4 pb-6 pt-4 px-4 rounded-2xl bg-gray-0 p-4 md:gap-6 md:p-6">
         <div class="flex flex-col gap-4 md:gap-6">
           <div class="flex flex-col gap-3 md:gap-4">
             <h3 class="text-lg font-semibold md:text-xl">Multipager</h3>
@@ -652,7 +681,7 @@
           </ul>
         </div>
       </div>
-      <div class="flex flex-col gap-4 rounded-2xl bg-gray-0 p-4 md:gap-6 md:p-6">
+      <div class="flex flex-col gap-4 pb-6 pt-4 px-4 rounded-2xl bg-gray-0 p-4 md:gap-6 md:p-6">
         <div class="flex flex-col gap-4 md:gap-6">
           <div class="flex flex-col gap-3 md:gap-4">
             <h3 class="text-lg font-semibold md:text-xl">E-commerce</h3>
@@ -694,11 +723,11 @@
       <div class="flex flex-col justify-between gap-6 rounded-2xl bg-gray-100 p-4 text-gray-900 md:gap-7 md:p-5" x-data="{state : false}">
         <div class="flex flex-col gap-3">
           <button class="flex items-center gap-4 md:flex-col md:items-start md:gap-6" x-on:click="state = !state">
-            <picture class="block h-12 w-12">
+            <picture class="block h-12 w-12 flex-none">
               <img src="images/services/1.svg" class="h-full w-full" alt="" />
             </picture>
             <span class="text-left text-lg font-semibold md:text-xl">Newsletter-Dienst (Brevo: ex Sendinblue)</span>
-            <svg width="20" height="20" class="transition-transform md:hidden" x-bind:class="state ? 'rotate-180' : ''">
+            <svg width="20" height="20" class="transition-transform md:hidden flex-none" x-bind:class="state ? 'rotate-180' : ''">
               <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
             </svg>
           </button>
@@ -714,11 +743,11 @@
       <div class="flex flex-col justify-between gap-6 rounded-2xl bg-gray-100 p-4 text-gray-900 md:gap-7 md:p-5" x-data="{state : false}">
         <div class="flex flex-col gap-3">
           <button class="flex items-center gap-4 md:flex-col md:items-start md:gap-6" x-on:click="state = !state">
-            <picture class="block h-12 w-12">
+            <picture class="block h-12 w-12 flex-none">
               <img src="images/services/1.svg" class="h-full w-full" alt="" />
             </picture>
             <span class="text-left text-lg font-semibold md:text-xl">Newsletter-Dienst (Brevo: ex Sendinblue)</span>
-            <svg width="20" height="20" class="transition-transform md:hidden" x-bind:class="state ? 'rotate-180' : ''">
+            <svg width="20" height="20" class="transition-transform md:hidden flex-none" x-bind:class="state ? 'rotate-180' : ''">
               <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
             </svg>
           </button>
@@ -734,11 +763,11 @@
       <div class="flex flex-col justify-between gap-6 rounded-2xl bg-gray-100 p-4 text-gray-900 md:gap-7 md:p-5" x-data="{state : false}">
         <div class="flex flex-col gap-3">
           <button class="flex items-center gap-4 md:flex-col md:items-start md:gap-6" x-on:click="state = !state">
-            <picture class="block h-12 w-12">
+            <picture class="block h-12 w-12 flex-none">
               <img src="images/services/1.svg" class="h-full w-full" alt="" />
             </picture>
             <span class="text-left text-lg font-semibold md:text-xl">Newsletter-Dienst (Brevo: ex Sendinblue)</span>
-            <svg width="20" height="20" class="transition-transform md:hidden" x-bind:class="state ? 'rotate-180' : ''">
+            <svg width="20" height="20" class="transition-transform md:hidden flex-none" x-bind:class="state ? 'rotate-180' : ''">
               <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
             </svg>
           </button>
@@ -754,11 +783,11 @@
       <div class="flex flex-col justify-between gap-6 rounded-2xl bg-gray-100 p-4 text-gray-900 md:gap-7 md:p-5" x-data="{state : false}">
         <div class="flex flex-col gap-3">
           <button class="flex items-center gap-4 md:flex-col md:items-start md:gap-6" x-on:click="state = !state">
-            <picture class="block h-12 w-12">
+            <picture class="block h-12 w-12 flex-none">
               <img src="images/services/1.svg" class="h-full w-full" alt="" />
             </picture>
             <span class="text-left text-lg font-semibold md:text-xl">Newsletter-Dienst (Brevo: ex Sendinblue)</span>
-            <svg width="20" height="20" class="transition-transform md:hidden" x-bind:class="state ? 'rotate-180' : ''">
+            <svg width="20" height="20" class="transition-transform md:hidden flex-none" x-bind:class="state ? 'rotate-180' : ''">
               <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
             </svg>
           </button>
@@ -774,11 +803,11 @@
       <div class="flex flex-col justify-between gap-6 rounded-2xl bg-gray-100 p-4 text-gray-900 md:gap-7 md:p-5" x-data="{state : false}">
         <div class="flex flex-col gap-3">
           <button class="flex items-center gap-4 md:flex-col md:items-start md:gap-6" x-on:click="state = !state">
-            <picture class="block h-12 w-12">
+            <picture class="block h-12 w-12 flex-none">
               <img src="images/services/1.svg" class="h-full w-full" alt="" />
             </picture>
             <span class="text-left text-lg font-semibold md:text-xl">Newsletter-Dienst (Brevo: ex Sendinblue)</span>
-            <svg width="20" height="20" class="transition-transform md:hidden" x-bind:class="state ? 'rotate-180' : ''">
+            <svg width="20" height="20" class="transition-transform md:hidden flex-none" x-bind:class="state ? 'rotate-180' : ''">
               <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
             </svg>
           </button>
@@ -794,11 +823,11 @@
       <div class="flex flex-col justify-between gap-6 rounded-2xl bg-gray-100 p-4 text-gray-900 md:gap-7 md:p-5" x-data="{state : false}">
         <div class="flex flex-col gap-3">
           <button class="flex items-center gap-4 md:flex-col md:items-start md:gap-6" x-on:click="state = !state">
-            <picture class="block h-12 w-12">
+            <picture class="block h-12 w-12 flex-none">
               <img src="images/services/1.svg" class="h-full w-full" alt="" />
             </picture>
             <span class="text-left text-lg font-semibold md:text-xl">Newsletter-Dienst (Brevo: ex Sendinblue)</span>
-            <svg width="20" height="20" class="transition-transform md:hidden" x-bind:class="state ? 'rotate-180' : ''">
+            <svg width="20" height="20" class="transition-transform md:hidden flex-none" x-bind:class="state ? 'rotate-180' : ''">
               <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
             </svg>
           </button>
@@ -814,11 +843,11 @@
       <div class="flex flex-col justify-between gap-6 rounded-2xl bg-gray-100 p-4 text-gray-900 md:gap-7 md:p-5" x-data="{state : false}">
         <div class="flex flex-col gap-3">
           <button class="flex items-center gap-4 md:flex-col md:items-start md:gap-6" x-on:click="state = !state">
-            <picture class="block h-12 w-12">
+            <picture class="block h-12 w-12 flex-none">
               <img src="images/services/1.svg" class="h-full w-full" alt="" />
             </picture>
             <span class="text-left text-lg font-semibold md:text-xl">Newsletter-Dienst (Brevo: ex Sendinblue)</span>
-            <svg width="20" height="20" class="transition-transform md:hidden" x-bind:class="state ? 'rotate-180' : ''">
+            <svg width="20" height="20" class="transition-transform md:hidden flex-none" x-bind:class="state ? 'rotate-180' : ''">
               <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
             </svg>
           </button>
@@ -834,11 +863,11 @@
       <div class="flex flex-col justify-between gap-6 rounded-2xl bg-gray-100 p-4 text-gray-900 md:gap-7 md:p-5" x-data="{state : false}">
         <div class="flex flex-col gap-3">
           <button class="flex items-center gap-4 md:flex-col md:items-start md:gap-6" x-on:click="state = !state">
-            <picture class="block h-12 w-12">
+            <picture class="block h-12 w-12 flex-none">
               <img src="images/services/1.svg" class="h-full w-full" alt="" />
             </picture>
             <span class="text-left text-lg font-semibold md:text-xl">Newsletter-Dienst (Brevo: ex Sendinblue)</span>
-            <svg width="20" height="20" class="transition-transform md:hidden" x-bind:class="state ? 'rotate-180' : ''">
+            <svg width="20" height="20" class="transition-transform md:hidden flex-none" x-bind:class="state ? 'rotate-180' : ''">
               <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
             </svg>
           </button>
@@ -1372,7 +1401,7 @@
             <img src="images/manager-full.jpg" class="block h-full w-full object-cover" alt="" />
           </picture>
         </div>
-        <div class="relative -ml-12 h-72 w-72 overflow-hidden rounded-full bg-accent-600 transition-transform hover:scale-105">
+        <div class="relative -ml-12 h-72 w-72 overflow-hidden rounded-full bg-accent-600 transition-colors hover:bg-gray-0 hover:text-gray-900">
           <a href="" class="absolute inset-0 z-10 flex h-full w-full flex-col items-center justify-center gap-4">
             <svg width="40" height="40">
               <use xlink:href="./assets/sprite.svg#wa_sprite"></use>
@@ -1385,10 +1414,8 @@
   </div>
 </section>
 
-
-      </main>
-      
-        <footer class="bg-gradient-dark rounded-t-[36px] py-8 md:py-12">
+</main>
+           <footer class="bg-gradient-dark rounded-t-[36px] py-8 md:py-12">
   <div class="container">
     <div class="mb-10 flex flex-col justify-between gap-6 md:flex-row">
       <a href="/" class="block">
@@ -1469,7 +1496,419 @@
   </div>
 </footer>
 
-      
+
+ 
+        </div>
+      </div>
+    </div>
+    <div class="fixed inset-0 z-50 bg-overlay">
+      <div
+        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
+      >
+        <div class="mb-3 flex justify-between">
+          <div class="flex gap-2 text-sm font-medium">
+            <div class="flex gap-1">
+              <span>1</span>
+              <span class="text-gray-700">/</span>
+              <span class="text-gray-700">4</span>
+            </div>
+            <span class="font-medium">Quiz</span>
+          </div>
+          <button>
+            <svg width="12" height="12">
+              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+            </svg>
+          </button>
+        </div>
+        <h4 class="mb-6 text-2xl font-semibold">Choose website type</h4>
+        <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class="flex">
+            <input type="radio" class="peer sr-only" id="cat-1" name="category" />
+            <label for="cat-1" class="flex flex-col gap-5 rounded-2xl border border-gray-200 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
+              <picture class="block h-12 w-12">
+                <img src="images/icon.svg" alt="" class="h-full w-full object-cover" />
+              </picture>
+              <div class="flex flex-col gap-2">
+                <h4 class="text-xl font-semibold">Onepager</h4>
+                <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
+              </div>
+              <div class="flex flex-col gap-1">
+                <p class="font-semibold">Starting from €649</p>
+                <p class="text-sm">zzgl. 19% MwSt</p>
+              </div>
+            </label>
+          </div>
+          <div class="flex">
+            <input type="radio" class="peer sr-only" id="cat-2" name="category" />
+            <label for="cat-2" class="flex flex-col gap-5 rounded-2xl border border-gray-200 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
+              <picture class="block h-12 w-12">
+                <img src="images/icon.svg" alt="" class="h-full w-full object-cover" />
+              </picture>
+              <div class="flex flex-col gap-2">
+                <h4 class="text-xl font-semibold">Multipager</h4>
+                <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
+              </div>
+              <div class="flex flex-col gap-1">
+                <p class="font-semibold">Starting from €1290</p>
+                <p class="text-sm">zzgl. 19% MwSt</p>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <button class="btn btn--disabled">Cancel</button>
+          <button class="btn btn--primary flex-1">Next</button>
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
+      >
+        <div class="mb-3 flex justify-between">
+          <div class="flex gap-2 text-sm font-medium">
+            <div class="flex gap-1">
+              <span>2</span>
+              <span class="text-gray-700">/</span>
+              <span class="text-gray-700">4</span>
+            </div>
+            <span class="font-medium">Quiz</span>
+          </div>
+          <button>
+            <svg width="12" height="12">
+              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+            </svg>
+          </button>
+        </div>
+        <h4 class="mb-6 text-2xl font-semibold">How many pages will be on your website?</h4>
+        <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-5">
+          
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="size-1" name="size" />
+            <label
+              for="size-1"
+              class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              4-6
+            </label>
+          </div>
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="size-1" name="size" />
+            <label
+              for="size-1"
+              class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              4-6
+            </label>
+          </div>
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="size-1" name="size" />
+            <label
+              for="size-1"
+              class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              4-6
+            </label>
+          </div>
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="size-1" name="size" />
+            <label
+              for="size-1"
+              class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              4-6
+            </label>
+          </div>
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="size-1" name="size" />
+            <label
+              for="size-1"
+              class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              4-6
+            </label>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <button class="btn btn--disabled">Back</button>
+          <button class="btn btn--primary flex-1">Next</button>
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
+      >
+        <div class="mb-3 flex justify-between">
+          <div class="flex gap-2 text-sm font-medium">
+            <div class="flex gap-1">
+              <span>3</span>
+              <span class="text-gray-700">/</span>
+              <span class="text-gray-700">4</span>
+            </div>
+            <span class="font-medium">Quiz</span>
+          </div>
+          <button>
+            <svg width="12" height="12">
+              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+            </svg>
+          </button>
+        </div>
+        <h4 class="mb-6 text-2xl font-semibold">Choose website type</h4>
+        <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class="bg-gradient-orange-pink relative overflow-hidden rounded-2xl p-[2px]">
+            <span class="bg-gradient-orange-pink absolute right-2 top-2 rounded-lg px-3 py-2 font-semibold"> Hot </span>
+            <div class="flex rounded-2xl bg-gray-0">
+              <input type="radio" class="peer sr-only" id="cat-1" name="category" />
+              <label for="cat-1" class="flex flex-col gap-5 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
+                <picture class="block h-12 w-12">
+                  <img src="images/icon.svg" alt="" class="h-full w-full object-cover" />
+                </picture>
+                <div class="flex flex-col gap-2">
+                  <h4 class="text-xl font-semibold">Individuelle</h4>
+                  <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <p class="font-semibold">Starting from €4490</p>
+                  <p class="text-sm">zzgl. 19% MwSt</p>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="flex">
+            <input type="radio" class="peer sr-only" id="cat-2" name="category" />
+            <label for="cat-2" class="flex flex-col gap-5 rounded-2xl border border-gray-200 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
+              <picture class="block h-12 w-12">
+                <img src="images/icon.svg" alt="" class="h-full w-full object-cover" />
+              </picture>
+              <div class="flex flex-col gap-2">
+                <h4 class="text-xl font-semibold">Multipager</h4>
+                <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
+              </div>
+              <div class="flex flex-col gap-1">
+                <p class="font-semibold">Starting from €1290</p>
+                <p class="text-sm">zzgl. 19% MwSt</p>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <button class="btn btn--disabled">Cancel</button>
+          <button class="btn btn--primary flex-1">Next</button>
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
+      >
+        <div class="mb-3 flex justify-between">
+          <div class="flex gap-2 text-sm font-medium">
+            <div class="flex gap-1">
+              <span>4</span>
+              <span class="text-gray-700">/</span>
+              <span class="text-gray-700">4</span>
+            </div>
+            <span class="font-medium">Quiz</span>
+          </div>
+          <button>
+            <svg width="12" height="12">
+              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+            </svg>
+          </button>
+        </div>
+        <h4 class="mb-6 text-2xl font-semibold">What extras are needed?</h4>
+        <div class="mb-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+          
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="add-1" name="add" />
+            <label
+              for="add-1"
+              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              <span>Newsletter-Dienst (Sendinblue)</span>
+              <span>+ €99*</span>
+            </label>
+          </div>
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="add-1" name="add" />
+            <label
+              for="add-1"
+              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              <span>Newsletter-Dienst (Sendinblue)</span>
+              <span>+ €99*</span>
+            </label>
+          </div>
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="add-1" name="add" />
+            <label
+              for="add-1"
+              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              <span>Newsletter-Dienst (Sendinblue)</span>
+              <span>+ €99*</span>
+            </label>
+          </div>
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="add-1" name="add" />
+            <label
+              for="add-1"
+              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              <span>Newsletter-Dienst (Sendinblue)</span>
+              <span>+ €99*</span>
+            </label>
+          </div>
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="add-1" name="add" />
+            <label
+              for="add-1"
+              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              <span>Newsletter-Dienst (Sendinblue)</span>
+              <span>+ €99*</span>
+            </label>
+          </div>
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="add-1" name="add" />
+            <label
+              for="add-1"
+              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              <span>Newsletter-Dienst (Sendinblue)</span>
+              <span>+ €99*</span>
+            </label>
+          </div>
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="add-1" name="add" />
+            <label
+              for="add-1"
+              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              <span>Newsletter-Dienst (Sendinblue)</span>
+              <span>+ €99*</span>
+            </label>
+          </div>
+          <div class="flex w-full">
+            <input type="radio" class="peer sr-only" id="add-1" name="add" />
+            <label
+              for="add-1"
+              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+            >
+              <span>Newsletter-Dienst (Sendinblue)</span>
+              <span>+ €99*</span>
+            </label>
+          </div>
+        </div>
+        <span class="mb-5 block text-sm text-gray-700">*zzgl. 19% MwSt</span>
+        <div class="flex gap-2">
+          <button class="btn btn--disabled">Back</button>
+          <button class="btn btn--primary flex-1">See results</button>
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
+      >
+        <div class="mb-3 flex items-center justify-between">
+          <h4 class="text-2xl font-semibold">Here’s your results</h4>
+          <button>
+            <svg width="12" height="12">
+              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="mb-4">
+          <h4 class="text-xl font-semibold mb-5">References</h4>
+          <div class="swiper js-refs-slider">
+            <div class="swiper-wrapper">
+              
+              <div class="swiper-slide">
+                <div class="flex flex-col gap-3">
+                  <picture class="block overflow-hidden rounded-xl border border-gray-200">
+                    <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
+                  </picture>
+                  <a href="" class="group flex items-center gap-4">
+                    <span class="text-sm font-semibold">comedy-union.de</span>
+                    <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                      <use xlink:href="./assets/sprite.svg#external_sprite"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex flex-col gap-3">
+                  <picture class="block overflow-hidden rounded-xl border border-gray-200">
+                    <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
+                  </picture>
+                  <a href="" class="group flex items-center gap-4">
+                    <span class="text-sm font-semibold">comedy-union.de</span>
+                    <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                      <use xlink:href="./assets/sprite.svg#external_sprite"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex flex-col gap-3">
+                  <picture class="block overflow-hidden rounded-xl border border-gray-200">
+                    <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
+                  </picture>
+                  <a href="" class="group flex items-center gap-4">
+                    <span class="text-sm font-semibold">comedy-union.de</span>
+                    <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                      <use xlink:href="./assets/sprite.svg#external_sprite"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex flex-col gap-3">
+                  <picture class="block overflow-hidden rounded-xl border border-gray-200">
+                    <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
+                  </picture>
+                  <a href="" class="group flex items-center gap-4">
+                    <span class="text-sm font-semibold">comedy-union.de</span>
+                    <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                      <use xlink:href="./assets/sprite.svg#external_sprite"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex flex-col gap-3">
+                  <picture class="block overflow-hidden rounded-xl border border-gray-200">
+                    <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
+                  </picture>
+                  <a href="" class="group flex items-center gap-4">
+                    <span class="text-sm font-semibold">comedy-union.de</span>
+                    <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                      <use xlink:href="./assets/sprite.svg#external_sprite"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="-mx-8 mb-6 border-t border-gray-200 px-8 pt-6">
+          <h4 class="mb-5 text-xl font-semibold">Project estimations</h4>
+
+          <div class="grid grid-cols-1 gap-3 md:grid-cols-2">
+            <div class="flex flex-col gap-4 rounded-2xl bg-gray-100 p-4">
+              <h5 class="text-sm">Preise</h5>
+              <div class="flex items-center gap-3">
+                <span class="text-2xl font-semibold text-gray-900"> €1290 </span>
+                <span class="text-sm text-gray-700">zzgl. 19% MwSt</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4 rounded-2xl bg-gray-100 p-4">
+              <h5 class="text-sm">Timeline</h5>
+              <div class="flex items-center gap-3">
+                <span class="text-2xl font-semibold text-gray-900">Up to 10 days </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <button class="btn btn--disabled">Recalculate</button>
+          <button class="btn btn--primary flex-1">I’m ready</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
