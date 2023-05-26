@@ -28,7 +28,8 @@
   }
 
   .root {
-    @apply overflow-clip bg-gray-100 text-base text-gray-900;
+    overflow: clip !important;
+    @apply bg-gray-100 text-base text-gray-900;
   }
 
   .link-hover {
@@ -99,7 +100,7 @@
     }
 
     &--secondary {
-      @apply rounded-xl bg-accent-800 font-semibold px-6 py-3 text-accent-500 transition-colors;
+      @apply rounded-xl bg-accent-800 px-6 py-3 font-semibold text-accent-500 transition-colors;
       &:hover {
         @apply bg-accent-500 text-gray-0;
       }

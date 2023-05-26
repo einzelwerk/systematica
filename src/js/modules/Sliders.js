@@ -98,7 +98,7 @@ class Sliders {
       modules: [Mousewheel, Navigation, EffectFade, Autoplay],
       init: false,
 
-      
+
       speed: 500,
 
       slidesPerView: 2.3,
@@ -113,6 +113,35 @@ class Sliders {
 
     sliderInstance.init();
   }
+
+  static featuresHero() {
+    const root = document.querySelector('.js-hero-features-slider');
+    const sliderInstance = new Swiper(root, {
+      modules: [Mousewheel, Navigation, EffectFade, Autoplay],
+      init: false,
+
+
+      speed: 500,
+
+      slidesPerView: 2.3,
+
+      spaceBetween: 4,
+
+      mousewheel: {
+        forceToAxis: true,
+        sensitivity: 0.3,
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        }
+      }
+
+    });
+
+    sliderInstance.init();
+  }
 }
 
 function slidersInit() {
@@ -120,6 +149,7 @@ function slidersInit() {
   Sliders.reviews();
   Sliders.hero();
   Sliders.refs();
+  Sliders.featuresHero();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
