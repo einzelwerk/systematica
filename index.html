@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   <script defer src="assets/js/main.js"></script><link href="main.css" rel="stylesheet"></head>
-  <body>
+  <body x-data="{quiz: false}">
     <div class="root">
        
 
 <header class="absolute inset-x-0 z-40 text-gray-200 " x-data="{menu : false}">
-  <div class="flex items-center gap-12 p-4 md:px-10 md:py-8">
+  <div class="flex items-center justify-between gap-12 p-4 md:px-10 md:py-8">
     <a href="/" class="block">
       <img src="images/logo.svg" alt="" />
     </a>
@@ -51,9 +51,12 @@
         </svg>
       </button>
       <div class="relative">
-        <button class="btn p-2" x-on:click="menu = !menu" x-on:click.outside="menu = false">
-          <svg width="24" height="24">
+        <button class="btn p-2 bg-gray-600 rounded-xl" x-on:click="menu = !menu" x-on:click.outside="menu = false">
+          <svg width="24" height="24" x-show="!menu">
             <use xlink:href="./assets/sprite.svg#menu_sprite"></use>
+          </svg>
+          <svg width="24" height="24" class="text-gray-0" x-show="menu">
+            <use xlink:href="./assets/sprite.svg#close_sprite"></use>
           </svg>
         </button>
         <div class="absolute right-0 py-3 px-4 bg-gray-0 rounded-xl w-40 mt-2" x-show="menu" x-transition>
@@ -127,57 +130,61 @@
             K.I.-LLER Features inklusive:
           </h2>
 
-          <ul class="flex gap-1">
-            <li class="bg-gradient-lt-blue group relative flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 font-semibold text-gray-900">
-              <span
-                class="pointer-events-none absolute bottom-full left-1/2 mb-3 w-96 -translate-x-1/2 whitespace-normal rounded-2xl bg-gray-0 px-4 py-3 text-center text-sm font-normal text-gray-700 opacity-0 transition-opacity group-hover:opacity-100"
+          <div class="swiper js-hero-features-slider max-w-xl">
+            <ul class="swiper-wrapper">
+              <li
+                class="swiper-slide bg-gradient-lt-blue group relative flex flex-1 items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 font-semibold text-gray-900"
               >
-                Collect third-party API credentials from your users and encrypt them before they touch your infrastructure, using Inbound Relay or any
-                of our client-side SDKs.
-                <svg width="24" height="12" class="absolute bottom-1 left-1/2 -translate-x-1/2 translate-y-full">
-                  <use xlink:href="./assets/sprite.svg#cor_sprite"></use>
+                <span
+                  class="pointer-events-none absolute bottom-full left-1/2 mb-3 w-96 -translate-x-1/2 whitespace-normal rounded-2xl bg-gray-0 px-4 py-3 text-center text-sm font-normal text-gray-700 opacity-0 transition-opacity group-hover:opacity-100"
+                >
+                  Collect third-party API credentials from your users and encrypt them before they touch your infrastructure, using Inbound Relay or
+                  any of our client-side SDKs.
+                  <svg width="24" height="12" class="absolute bottom-1 left-1/2 -translate-x-1/2 translate-y-full">
+                    <use xlink:href="./assets/sprite.svg#cor_sprite"></use>
+                  </svg>
+                </span>
+                <svg width="20" height="20">
+                  <use xlink:href="./assets/sprite.svg#lighting_sprite"></use>
                 </svg>
-              </span>
-              <svg width="20" height="20">
-                <use xlink:href="./assets/sprite.svg#lighting_sprite"></use>
-              </svg>
-              Content Generator
-            </li>
-            <li
-              class="bg-gradient-orange-pink group relative flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 font-semibold text-gray-900"
-            >
-              <span
-                class="pointer-events-none absolute bottom-full left-1/2 mb-3 w-96 -translate-x-1/2 whitespace-normal rounded-2xl bg-gray-0 px-4 py-3 text-center text-sm font-normal text-gray-700 opacity-0 transition-opacity group-hover:opacity-100"
+                Content Generator
+              </li>
+              <li
+                class="swiper-slide bg-gradient-orange-pink group relative flex flex-1 items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 font-semibold text-gray-900"
               >
-                Collect third-party API credentials from your users and encrypt them before they touch your infrastructure, using Inbound Relay or any
-                of our client-side SDKs.
-                <svg width="24" height="12" class="absolute bottom-1 left-1/2 -translate-x-1/2 translate-y-full">
-                  <use xlink:href="./assets/sprite.svg#cor_sprite"></use>
+                <span
+                  class="pointer-events-none absolute bottom-full left-1/2 mb-3 w-96 -translate-x-1/2 whitespace-normal rounded-2xl bg-gray-0 px-4 py-3 text-center text-sm font-normal text-gray-700 opacity-0 transition-opacity group-hover:opacity-100"
+                >
+                  Collect third-party API credentials from your users and encrypt them before they touch your infrastructure, using Inbound Relay or
+                  any of our client-side SDKs.
+                  <svg width="24" height="12" class="absolute bottom-1 left-1/2 -translate-x-1/2 translate-y-full">
+                    <use xlink:href="./assets/sprite.svg#cor_sprite"></use>
+                  </svg>
+                </span>
+                <svg width="20" height="20">
+                  <use xlink:href="./assets/sprite.svg#translate_sprite"></use>
                 </svg>
-              </span>
-              <svg width="20" height="20">
-                <use xlink:href="./assets/sprite.svg#translate_sprite"></use>
-              </svg>
-              Multilanguage
-            </li>
-            <li
-              class="bg-gradient-yellow-pink group relative flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 font-semibold text-gray-900"
-            >
-              <span
-                class="pointer-events-none absolute bottom-full left-1/2 mb-3 w-96 -translate-x-1/2 whitespace-normal rounded-2xl bg-gray-0 px-4 py-3 text-center text-sm font-normal text-gray-700 opacity-0 transition-opacity group-hover:opacity-100"
+                Multilanguage
+              </li>
+              <li
+                class="swiper-slide bg-gradient-yellow-pink group relative flex flex-1 items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 font-semibold text-gray-900"
               >
-                Collect third-party API credentials from your users and encrypt them before they touch your infrastructure, using Inbound Relay or any
-                of our client-side SDKs.
-                <svg width="24" height="12" class="absolute bottom-1 left-1/2 -translate-x-1/2 translate-y-full">
-                  <use xlink:href="./assets/sprite.svg#cor_sprite"></use>
+                <span
+                  class="pointer-events-none absolute bottom-full left-1/2 mb-3 w-96 -translate-x-1/2 whitespace-normal rounded-2xl bg-gray-0 px-4 py-3 text-center text-sm font-normal text-gray-700 opacity-0 transition-opacity group-hover:opacity-100"
+                >
+                  Collect third-party API credentials from your users and encrypt them before they touch your infrastructure, using Inbound Relay or
+                  any of our client-side SDKs.
+                  <svg width="24" height="12" class="absolute bottom-1 left-1/2 -translate-x-1/2 translate-y-full">
+                    <use xlink:href="./assets/sprite.svg#cor_sprite"></use>
+                  </svg>
+                </span>
+                <svg width="20" height="20">
+                  <use xlink:href="./assets/sprite.svg#like_sprite"></use>
                 </svg>
-              </span>
-              <svg width="20" height="20">
-                <use xlink:href="./assets/sprite.svg#like_sprite"></use>
-              </svg>
-              Testimonials
-            </li>
-          </ul>
+                Testimonials
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="swiper js-hero-slider w-full">
@@ -1501,412 +1508,525 @@
         </div>
       </div>
     </div>
-    <div class="fixed inset-0 z-50 bg-overlay">
+    <div class="fixed inset-0 z-50 bg-overlay" x-show="quiz">
       <div
-        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
+        class="absolute inset-x-1/2 w-full max-w-2xl -translate-x-1/2 max-h-screen overflow-auto top-5 xl:top-36 rounded-3xl border border-gray-100 bg-gray-0 py-6 px-4 md:px-8 md:py-6"
       >
-        <div class="mb-3 flex justify-between">
-          <div class="flex gap-2 text-sm font-medium">
-            <div class="flex gap-1">
-              <span>1</span>
-              <span class="text-gray-700">/</span>
-              <span class="text-gray-700">4</span>
+        <div class="flex flex-col">
+          <div class="mb-3 flex justify-between">
+            <div class="flex gap-2 text-sm font-medium">
+              <div class="flex gap-1">
+                <span>1</span>
+                <span class="text-gray-700">/</span>
+                <span class="text-gray-700">4</span>
+              </div>
+              <span class="font-medium">Quiz</span>
             </div>
-            <span class="font-medium">Quiz</span>
+            <button>
+              <svg width="12" height="12">
+                <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+              </svg>
+            </button>
           </div>
-          <button>
-            <svg width="12" height="12">
-              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
-            </svg>
-          </button>
-        </div>
-        <h4 class="mb-6 text-2xl font-semibold">Choose website type</h4>
-        <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="flex">
-            <input type="radio" class="peer sr-only" id="cat-1" name="category" />
-            <label for="cat-1" class="flex flex-col gap-5 rounded-2xl border border-gray-200 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
-              <picture class="block h-12 w-12">
-                <img src="images/icon.svg" alt="" class="h-full w-full object-cover" />
-              </picture>
-              <div class="flex flex-col gap-2">
-                <h4 class="text-xl font-semibold">Onepager</h4>
-                <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
-              </div>
-              <div class="flex flex-col gap-1">
-                <p class="font-semibold">Starting from €649</p>
-                <p class="text-sm">zzgl. 19% MwSt</p>
-              </div>
-            </label>
-          </div>
-          <div class="flex">
-            <input type="radio" class="peer sr-only" id="cat-2" name="category" />
-            <label for="cat-2" class="flex flex-col gap-5 rounded-2xl border border-gray-200 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
-              <picture class="block h-12 w-12">
-                <img src="images/icon.svg" alt="" class="h-full w-full object-cover" />
-              </picture>
-              <div class="flex flex-col gap-2">
-                <h4 class="text-xl font-semibold">Multipager</h4>
-                <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
-              </div>
-              <div class="flex flex-col gap-1">
-                <p class="font-semibold">Starting from €1290</p>
-                <p class="text-sm">zzgl. 19% MwSt</p>
-              </div>
-            </label>
-          </div>
-        </div>
-        <div class="flex gap-2">
-          <button class="btn btn--disabled">Cancel</button>
-          <button class="btn btn--primary flex-1">Next</button>
-        </div>
-      </div>
-      <div
-        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
-      >
-        <div class="mb-3 flex justify-between">
-          <div class="flex gap-2 text-sm font-medium">
-            <div class="flex gap-1">
-              <span>2</span>
-              <span class="text-gray-700">/</span>
-              <span class="text-gray-700">4</span>
-            </div>
-            <span class="font-medium">Quiz</span>
-          </div>
-          <button>
-            <svg width="12" height="12">
-              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
-            </svg>
-          </button>
-        </div>
-        <h4 class="mb-6 text-2xl font-semibold">How many pages will be on your website?</h4>
-        <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-5">
-          
-          <div class="flex w-full">
-            <input type="radio" class="peer sr-only" id="size-1" name="size" />
-            <label
-              for="size-1"
-              class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
-            >
-              4-6
-            </label>
-          </div>
-          <div class="flex w-full">
-            <input type="radio" class="peer sr-only" id="size-1" name="size" />
-            <label
-              for="size-1"
-              class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
-            >
-              4-6
-            </label>
-          </div>
-          <div class="flex w-full">
-            <input type="radio" class="peer sr-only" id="size-1" name="size" />
-            <label
-              for="size-1"
-              class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
-            >
-              4-6
-            </label>
-          </div>
-          <div class="flex w-full">
-            <input type="radio" class="peer sr-only" id="size-1" name="size" />
-            <label
-              for="size-1"
-              class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
-            >
-              4-6
-            </label>
-          </div>
-          <div class="flex w-full">
-            <input type="radio" class="peer sr-only" id="size-1" name="size" />
-            <label
-              for="size-1"
-              class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
-            >
-              4-6
-            </label>
-          </div>
-        </div>
-        <div class="flex gap-2">
-          <button class="btn btn--disabled">Back</button>
-          <button class="btn btn--primary flex-1">Next</button>
-        </div>
-      </div>
-      <div
-        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
-      >
-        <div class="mb-3 flex justify-between">
-          <div class="flex gap-2 text-sm font-medium">
-            <div class="flex gap-1">
-              <span>3</span>
-              <span class="text-gray-700">/</span>
-              <span class="text-gray-700">4</span>
-            </div>
-            <span class="font-medium">Quiz</span>
-          </div>
-          <button>
-            <svg width="12" height="12">
-              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
-            </svg>
-          </button>
-        </div>
-        <h4 class="mb-6 text-2xl font-semibold">Choose website type</h4>
-        <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="bg-gradient-orange-pink relative overflow-hidden rounded-2xl p-[2px]">
-            <span class="bg-gradient-orange-pink absolute right-2 top-2 rounded-lg px-3 py-2 font-semibold"> Hot </span>
-            <div class="flex rounded-2xl bg-gray-0">
+          <h4 class="mb-6 text-2xl font-semibold">Choose website type</h4>
+          <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div class="flex">
               <input type="radio" class="peer sr-only" id="cat-1" name="category" />
-              <label for="cat-1" class="flex flex-col gap-5 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
+              <label for="cat-1" class="flex flex-col gap-5 rounded-2xl border border-gray-200 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
                 <picture class="block h-12 w-12">
                   <img src="images/icon.svg" alt="" class="h-full w-full object-cover" />
                 </picture>
                 <div class="flex flex-col gap-2">
-                  <h4 class="text-xl font-semibold">Individuelle</h4>
+                  <h4 class="text-xl font-semibold">Onepager</h4>
                   <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <p class="font-semibold">Starting from €4490</p>
+                  <p class="font-semibold">Starting from €649</p>
+                  <p class="text-sm">zzgl. 19% MwSt</p>
+                </div>
+              </label>
+            </div>
+            <div class="flex">
+              <input type="radio" class="peer sr-only" id="cat-2" name="category" />
+              <label for="cat-2" class="flex flex-col gap-5 rounded-2xl border border-gray-200 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
+                <picture class="block h-12 w-12">
+                  <img src="images/icon.svg" alt="" class="h-full w-full object-cover" />
+                </picture>
+                <div class="flex flex-col gap-2">
+                  <h4 class="text-xl font-semibold">Multipager</h4>
+                  <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <p class="font-semibold">Starting from €1290</p>
                   <p class="text-sm">zzgl. 19% MwSt</p>
                 </div>
               </label>
             </div>
           </div>
-          <div class="flex">
-            <input type="radio" class="peer sr-only" id="cat-2" name="category" />
-            <label for="cat-2" class="flex flex-col gap-5 rounded-2xl border border-gray-200 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
-              <picture class="block h-12 w-12">
-                <img src="images/icon.svg" alt="" class="h-full w-full object-cover" />
-              </picture>
-              <div class="flex flex-col gap-2">
-                <h4 class="text-xl font-semibold">Multipager</h4>
-                <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
-              </div>
-              <div class="flex flex-col gap-1">
-                <p class="font-semibold">Starting from €1290</p>
-                <p class="text-sm">zzgl. 19% MwSt</p>
-              </div>
-            </label>
+          <div class="flex gap-2">
+            <button class="btn btn--disabled">Cancel</button>
+            <button class="btn btn--primary flex-1">Next</button>
           </div>
-        </div>
-        <div class="flex gap-2">
-          <button class="btn btn--disabled">Cancel</button>
-          <button class="btn btn--primary flex-1">Next</button>
         </div>
       </div>
       <div
-        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
+        class="absolute inset-x-1/2 w-full max-w-2xl -translate-x-1/2 max-h-screen overflow-auto top-5 xl:top-36 rounded-3xl border border-gray-100 bg-gray-0 py-6 px-4 md:px-8 md:py-6"
       >
-        <div class="mb-3 flex justify-between">
-          <div class="flex gap-2 text-sm font-medium">
-            <div class="flex gap-1">
-              <span>4</span>
-              <span class="text-gray-700">/</span>
-              <span class="text-gray-700">4</span>
+        <div class="flex flex-col">
+          <div class="mb-3 flex justify-between">
+            <div class="flex gap-2 text-sm font-medium">
+              <div class="flex gap-1">
+                <span>2</span>
+                <span class="text-gray-700">/</span>
+                <span class="text-gray-700">4</span>
+              </div>
+              <span class="font-medium">Quiz</span>
             </div>
-            <span class="font-medium">Quiz</span>
+            <button>
+              <svg width="12" height="12">
+                <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+              </svg>
+            </button>
           </div>
-          <button>
-            <svg width="12" height="12">
-              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
-            </svg>
-          </button>
-        </div>
-        <h4 class="mb-6 text-2xl font-semibold">What extras are needed?</h4>
-        <div class="mb-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-          
-          <div class="flex w-full">
-            <input type="radio" class="peer sr-only" id="add-1" name="add" />
-            <label
-              for="add-1"
-              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
-            >
-              <span>Newsletter-Dienst (Sendinblue)</span>
-              <span>+ €99*</span>
-            </label>
+          <h4 class="mb-6 text-2xl font-semibold">How many pages will be on your website?</h4>
+          <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-5">
+            
+            <div class="flex w-full">
+              <input type="radio" class="peer sr-only" id="size-1" name="size" />
+              <label
+                for="size-1"
+                class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+              >
+                4-6
+              </label>
+            </div>
+            <div class="flex w-full">
+              <input type="radio" class="peer sr-only" id="size-1" name="size" />
+              <label
+                for="size-1"
+                class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+              >
+                4-6
+              </label>
+            </div>
+            <div class="flex w-full">
+              <input type="radio" class="peer sr-only" id="size-1" name="size" />
+              <label
+                for="size-1"
+                class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+              >
+                4-6
+              </label>
+            </div>
+            <div class="flex w-full">
+              <input type="radio" class="peer sr-only" id="size-1" name="size" />
+              <label
+                for="size-1"
+                class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+              >
+                4-6
+              </label>
+            </div>
+            <div class="flex w-full">
+              <input type="radio" class="peer sr-only" id="size-1" name="size" />
+              <label
+                for="size-1"
+                class="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 p-5 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+              >
+                4-6
+              </label>
+            </div>
           </div>
-          <div class="flex w-full">
-            <input type="radio" class="peer sr-only" id="add-1" name="add" />
-            <label
-              for="add-1"
-              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
-            >
-              <span>Newsletter-Dienst (Sendinblue)</span>
-              <span>+ €99*</span>
-            </label>
+          <div class="flex gap-2">
+            <button class="btn btn--disabled">Back</button>
+            <button class="btn btn--primary flex-1">Next</button>
           </div>
-          <div class="flex w-full">
-            <input type="radio" class="peer sr-only" id="add-1" name="add" />
-            <label
-              for="add-1"
-              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
-            >
-              <span>Newsletter-Dienst (Sendinblue)</span>
-              <span>+ €99*</span>
-            </label>
-          </div>
-          <div class="flex w-full">
-            <input type="radio" class="peer sr-only" id="add-1" name="add" />
-            <label
-              for="add-1"
-              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
-            >
-              <span>Newsletter-Dienst (Sendinblue)</span>
-              <span>+ €99*</span>
-            </label>
-          </div>
-          <div class="flex w-full">
-            <input type="radio" class="peer sr-only" id="add-1" name="add" />
-            <label
-              for="add-1"
-              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
-            >
-              <span>Newsletter-Dienst (Sendinblue)</span>
-              <span>+ €99*</span>
-            </label>
-          </div>
-          <div class="flex w-full">
-            <input type="radio" class="peer sr-only" id="add-1" name="add" />
-            <label
-              for="add-1"
-              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
-            >
-              <span>Newsletter-Dienst (Sendinblue)</span>
-              <span>+ €99*</span>
-            </label>
-          </div>
-          <div class="flex w-full">
-            <input type="radio" class="peer sr-only" id="add-1" name="add" />
-            <label
-              for="add-1"
-              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
-            >
-              <span>Newsletter-Dienst (Sendinblue)</span>
-              <span>+ €99*</span>
-            </label>
-          </div>
-          <div class="flex w-full">
-            <input type="radio" class="peer sr-only" id="add-1" name="add" />
-            <label
-              for="add-1"
-              class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
-            >
-              <span>Newsletter-Dienst (Sendinblue)</span>
-              <span>+ €99*</span>
-            </label>
-          </div>
-        </div>
-        <span class="mb-5 block text-sm text-gray-700">*zzgl. 19% MwSt</span>
-        <div class="flex gap-2">
-          <button class="btn btn--disabled">Back</button>
-          <button class="btn btn--primary flex-1">See results</button>
         </div>
       </div>
       <div
-        class="absolute inset-x-1/2 top-1/2 w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-gray-100 bg-gray-0 px-8 py-6"
+        class="absolute inset-x-1/2 w-full max-w-2xl -translate-x-1/2 max-h-screen overflow-auto top-5 xl:top-36 rounded-3xl border border-gray-100 bg-gray-0 py-6 px-4 md:px-8 md:py-6"
       >
-        <div class="mb-3 flex items-center justify-between">
-          <h4 class="text-2xl font-semibold">Here’s your results</h4>
-          <button>
-            <svg width="12" height="12">
-              <use xlink:href="./assets/sprite.svg#close_sprite"></use>
-            </svg>
-          </button>
+        <div class="flex flex-col">
+          <div class="mb-3 flex justify-between">
+            <div class="flex gap-2 text-sm font-medium">
+              <div class="flex gap-1">
+                <span>3</span>
+                <span class="text-gray-700">/</span>
+                <span class="text-gray-700">4</span>
+              </div>
+              <span class="font-medium">Quiz</span>
+            </div>
+            <button>
+              <svg width="12" height="12">
+                <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+              </svg>
+            </button>
+          </div>
+          <h4 class="mb-6 text-2xl font-semibold">Choose website type</h4>
+          <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div class="bg-gradient-orange-pink relative overflow-hidden rounded-2xl p-[2px]">
+              <span class="bg-gradient-orange-pink absolute right-2 top-2 rounded-lg px-3 py-2 font-semibold"> Hot </span>
+              <div class="flex rounded-2xl bg-gray-0">
+                <input type="radio" class="peer sr-only" id="cat-1" name="category" />
+                <label for="cat-1" class="flex flex-col gap-5 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
+                  <picture class="block h-12 w-12">
+                    <img src="images/icon.svg" alt="" class="h-full w-full object-cover" />
+                  </picture>
+                  <div class="flex flex-col gap-2">
+                    <h4 class="text-xl font-semibold">Individuelle</h4>
+                    <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <p class="font-semibold">Starting from €4490</p>
+                    <p class="text-sm">zzgl. 19% MwSt</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="flex">
+              <input type="radio" class="peer sr-only" id="cat-2" name="category" />
+              <label for="cat-2" class="flex flex-col gap-5 rounded-2xl border border-gray-200 p-5 hover:bg-gray-100 peer-checked:bg-accent-200">
+                <picture class="block h-12 w-12">
+                  <img src="images/icon.svg" alt="" class="h-full w-full object-cover" />
+                </picture>
+                <div class="flex flex-col gap-2">
+                  <h4 class="text-xl font-semibold">Multipager</h4>
+                  <p class="text-sm text-gray-700">Passen Sie Ihre Website mühelos an mit unseren vorgefertigten UI-Komponenten</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <p class="font-semibold">Starting from €1290</p>
+                  <p class="text-sm">zzgl. 19% MwSt</p>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="flex gap-2">
+            <button class="btn btn--disabled">Cancel</button>
+            <button class="btn btn--primary flex-1">Next</button>
+          </div>
         </div>
-        <div class="mb-4">
-          <h4 class="text-xl font-semibold mb-5">References</h4>
-          <div class="swiper js-refs-slider">
-            <div class="swiper-wrapper">
-              
-              <div class="swiper-slide">
-                <div class="flex flex-col gap-3">
-                  <picture class="block overflow-hidden rounded-xl border border-gray-200">
-                    <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
-                  </picture>
-                  <a href="" class="group flex items-center gap-4">
-                    <span class="text-sm font-semibold">comedy-union.de</span>
-                    <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
-                      <use xlink:href="./assets/sprite.svg#external_sprite"></use>
-                    </svg>
-                  </a>
-                </div>
+      </div>
+      <div
+        class="absolute inset-x-1/2 w-full max-w-2xl -translate-x-1/2 max-h-screen overflow-auto top-5 xl:top-36 rounded-3xl border border-gray-100 bg-gray-0 py-6 px-4 md:px-8 md:py-6"
+      >
+        <div class="flex flex-col">
+          <div class="mb-3 flex justify-between">
+            <div class="flex gap-2 text-sm font-medium">
+              <div class="flex gap-1">
+                <span>4</span>
+                <span class="text-gray-700">/</span>
+                <span class="text-gray-700">4</span>
               </div>
-              <div class="swiper-slide">
-                <div class="flex flex-col gap-3">
-                  <picture class="block overflow-hidden rounded-xl border border-gray-200">
-                    <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
-                  </picture>
-                  <a href="" class="group flex items-center gap-4">
-                    <span class="text-sm font-semibold">comedy-union.de</span>
-                    <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
-                      <use xlink:href="./assets/sprite.svg#external_sprite"></use>
-                    </svg>
-                  </a>
+              <span class="font-medium">Quiz</span>
+            </div>
+            <button>
+              <svg width="12" height="12">
+                <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+              </svg>
+            </button>
+          </div>
+          <h4 class="mb-6 text-2xl font-semibold">What extras are needed?</h4>
+          <div class="mb-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+            
+            <div class="flex w-full">
+              <input type="radio" class="peer sr-only" id="add-1" name="add" />
+              <label
+                for="add-1"
+                class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+              >
+                <span>Newsletter-Dienst (Sendinblue)</span>
+                <span>+ €99*</span>
+              </label>
+            </div>
+            <div class="flex w-full">
+              <input type="radio" class="peer sr-only" id="add-1" name="add" />
+              <label
+                for="add-1"
+                class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+              >
+                <span>Newsletter-Dienst (Sendinblue)</span>
+                <span>+ €99*</span>
+              </label>
+            </div>
+            <div class="flex w-full">
+              <input type="radio" class="peer sr-only" id="add-1" name="add" />
+              <label
+                for="add-1"
+                class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+              >
+                <span>Newsletter-Dienst (Sendinblue)</span>
+                <span>+ €99*</span>
+              </label>
+            </div>
+            <div class="flex w-full">
+              <input type="radio" class="peer sr-only" id="add-1" name="add" />
+              <label
+                for="add-1"
+                class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+              >
+                <span>Newsletter-Dienst (Sendinblue)</span>
+                <span>+ €99*</span>
+              </label>
+            </div>
+            <div class="flex w-full">
+              <input type="radio" class="peer sr-only" id="add-1" name="add" />
+              <label
+                for="add-1"
+                class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+              >
+                <span>Newsletter-Dienst (Sendinblue)</span>
+                <span>+ €99*</span>
+              </label>
+            </div>
+            <div class="flex w-full">
+              <input type="radio" class="peer sr-only" id="add-1" name="add" />
+              <label
+                for="add-1"
+                class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+              >
+                <span>Newsletter-Dienst (Sendinblue)</span>
+                <span>+ €99*</span>
+              </label>
+            </div>
+            <div class="flex w-full">
+              <input type="radio" class="peer sr-only" id="add-1" name="add" />
+              <label
+                for="add-1"
+                class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+              >
+                <span>Newsletter-Dienst (Sendinblue)</span>
+                <span>+ €99*</span>
+              </label>
+            </div>
+            <div class="flex w-full">
+              <input type="radio" class="peer sr-only" id="add-1" name="add" />
+              <label
+                for="add-1"
+                class="flex w-full flex-col items-start gap-6 rounded-2xl border border-gray-200 p-4 text-center font-semibold hover:bg-gray-100 peer-checked:bg-accent-200"
+              >
+                <span>Newsletter-Dienst (Sendinblue)</span>
+                <span>+ €99*</span>
+              </label>
+            </div>
+          </div>
+          <span class="mb-5 block text-sm text-gray-700">*zzgl. 19% MwSt</span>
+          <div class="flex gap-2">
+            <button class="btn btn--disabled">Back</button>
+            <button class="btn btn--primary flex-1">See results</button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-1/2 w-full max-w-2xl -translate-x-1/2 max-h-screen overflow-auto top-5 xl:top-36 rounded-3xl border border-gray-100 bg-gray-0 py-6 px-4 md:px-8 md:py-6"
+      >
+        <div class="flex flex-col">
+          <div class="mb-3 flex items-center justify-between">
+            <h4 class="text-2xl font-semibold">Here’s your results</h4>
+            <button>
+              <svg width="12" height="12">
+                <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="mb-4">
+            <h4 class="mb-5 text-xl font-semibold">References</h4>
+            <div class="swiper js-refs-slider">
+              <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-3">
+                    <picture class="block overflow-hidden rounded-xl border border-gray-200">
+                      <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
+                    </picture>
+                    <a href="" class="group flex items-center gap-4">
+                      <span class="text-sm font-semibold">comedy-union.de</span>
+                      <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <use xlink:href="./assets/sprite.svg#external_sprite"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="flex flex-col gap-3">
-                  <picture class="block overflow-hidden rounded-xl border border-gray-200">
-                    <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
-                  </picture>
-                  <a href="" class="group flex items-center gap-4">
-                    <span class="text-sm font-semibold">comedy-union.de</span>
-                    <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
-                      <use xlink:href="./assets/sprite.svg#external_sprite"></use>
-                    </svg>
-                  </a>
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-3">
+                    <picture class="block overflow-hidden rounded-xl border border-gray-200">
+                      <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
+                    </picture>
+                    <a href="" class="group flex items-center gap-4">
+                      <span class="text-sm font-semibold">comedy-union.de</span>
+                      <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <use xlink:href="./assets/sprite.svg#external_sprite"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="flex flex-col gap-3">
-                  <picture class="block overflow-hidden rounded-xl border border-gray-200">
-                    <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
-                  </picture>
-                  <a href="" class="group flex items-center gap-4">
-                    <span class="text-sm font-semibold">comedy-union.de</span>
-                    <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
-                      <use xlink:href="./assets/sprite.svg#external_sprite"></use>
-                    </svg>
-                  </a>
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-3">
+                    <picture class="block overflow-hidden rounded-xl border border-gray-200">
+                      <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
+                    </picture>
+                    <a href="" class="group flex items-center gap-4">
+                      <span class="text-sm font-semibold">comedy-union.de</span>
+                      <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <use xlink:href="./assets/sprite.svg#external_sprite"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="flex flex-col gap-3">
-                  <picture class="block overflow-hidden rounded-xl border border-gray-200">
-                    <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
-                  </picture>
-                  <a href="" class="group flex items-center gap-4">
-                    <span class="text-sm font-semibold">comedy-union.de</span>
-                    <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
-                      <use xlink:href="./assets/sprite.svg#external_sprite"></use>
-                    </svg>
-                  </a>
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-3">
+                    <picture class="block overflow-hidden rounded-xl border border-gray-200">
+                      <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
+                    </picture>
+                    <a href="" class="group flex items-center gap-4">
+                      <span class="text-sm font-semibold">comedy-union.de</span>
+                      <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <use xlink:href="./assets/sprite.svg#external_sprite"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-3">
+                    <picture class="block overflow-hidden rounded-xl border border-gray-200">
+                      <img src="images/refs.jpg" class="h-full w-full object-cover" alt="" />
+                    </picture>
+                    <a href="" class="group flex items-center gap-4">
+                      <span class="text-sm font-semibold">comedy-union.de</span>
+                      <svg width="12" height="12" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <use xlink:href="./assets/sprite.svg#external_sprite"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="-mx-8 mb-6 border-t border-gray-200 px-8 pt-6">
-          <h4 class="mb-5 text-xl font-semibold">Project estimations</h4>
+          <div class="-mx-8 mb-6 border-t border-gray-200 px-8 pt-6">
+            <h4 class="mb-5 text-xl font-semibold">Project estimations</h4>
 
-          <div class="grid grid-cols-1 gap-3 md:grid-cols-2">
-            <div class="flex flex-col gap-4 rounded-2xl bg-gray-100 p-4">
-              <h5 class="text-sm">Preise</h5>
-              <div class="flex items-center gap-3">
-                <span class="text-2xl font-semibold text-gray-900"> €1290 </span>
-                <span class="text-sm text-gray-700">zzgl. 19% MwSt</span>
+            <div class="grid grid-cols-1 gap-3 md:grid-cols-2">
+              <div class="flex flex-col gap-4 rounded-2xl bg-gray-100 p-4">
+                <h5 class="text-sm">Preise</h5>
+                <div class="flex items-center gap-3">
+                  <span class="text-2xl font-semibold text-gray-900"> €1290 </span>
+                  <span class="text-sm text-gray-700">zzgl. 19% MwSt</span>
+                </div>
               </div>
-            </div>
-            <div class="flex flex-col gap-4 rounded-2xl bg-gray-100 p-4">
-              <h5 class="text-sm">Timeline</h5>
-              <div class="flex items-center gap-3">
-                <span class="text-2xl font-semibold text-gray-900">Up to 10 days </span>
+              <div class="flex flex-col gap-4 rounded-2xl bg-gray-100 p-4">
+                <h5 class="text-sm">Timeline</h5>
+                <div class="flex items-center gap-3">
+                  <span class="text-2xl font-semibold text-gray-900">Up to 10 days </span>
+                </div>
               </div>
             </div>
           </div>
+          <div class="flex gap-2">
+            <button class="btn btn--disabled">Recalculate</button>
+            <button class="btn btn--primary flex-1">I’m ready</button>
+          </div>
         </div>
-        <div class="flex gap-2">
-          <button class="btn btn--disabled">Recalculate</button>
-          <button class="btn btn--primary flex-1">I’m ready</button>
+      </div>
+      <div
+        class="absolute inset-x-1/2 w-full max-w-2xl -translate-x-1/2 max-h-screen overflow-auto top-5 xl:top-36 rounded-3xl border border-gray-100 bg-gray-0 py-6 px-4 md:px-8 md:py-6"
+      >
+        <div class="flex flex-col">
+          <div class="mb-6 flex items-center justify-between">
+            <h4 class="text-2xl font-semibold">Book a call</h4>
+            <button>
+              <svg width="12" height="12">
+                <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+              </svg>
+            </button>
+          </div>
+          <form action="">
+            <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+              <div>
+                <label for="">
+                  <input
+                    type="text"
+                    class="w-full rounded-xl border-gray-200 px-4 py-3 transition-colors placeholder:text-gray-200 hover:border-gray-600 hover:placeholder:text-gray-700"
+                    placeholder="Name"
+                  />
+                </label>
+              </div>
+              <div>
+                <label for="">
+                  <input
+                    type="text"
+                    class="w-full rounded-xl border-gray-200 px-4 py-3 transition-colors placeholder:text-gray-200 hover:border-gray-600 hover:placeholder:text-gray-700"
+                    placeholder="Company"
+                  />
+                </label>
+              </div>
+              <div>
+                <label for="">
+                  <input
+                    type="text"
+                    class="w-full rounded-xl border-gray-200 px-4 py-3 transition-colors placeholder:text-gray-200 hover:border-gray-600 hover:placeholder:text-gray-700"
+                    placeholder="E-mail*"
+                  />
+                </label>
+              </div>
+              <div>
+                <label for="">
+                  <input
+                    type="text"
+                    class="w-full rounded-xl border-gray-200 px-4 py-3 transition-colors placeholder:text-gray-200 hover:border-gray-600 hover:placeholder:text-gray-700"
+                    placeholder="Phone"
+                  />
+                </label>
+              </div>
+              <div class="md:col-span-2">
+                <label for="">
+                  <input
+                    type="text"
+                    class="w-full rounded-xl border-gray-200 px-4 py-3 transition-colors placeholder:text-gray-200 hover:border-gray-600 hover:placeholder:text-gray-700"
+                    placeholder="Preferred connection way"
+                  />
+                </label>
+              </div>
+              <div class="md:col-span-2">
+                <label for="">
+                  <select
+                    type="text"
+                    class="w-full rounded-xl border-gray-200 px-4 py-3 text-gray-200 transition-colors hover:border-gray-600 hover:placeholder:text-gray-700"
+                    placeholder="Preferred connection way"
+                  >
+                    <option value="">Lorem, ipsum.</option>
+                    <option value="">Lorem, ipsum. 2</option>
+                    <option value="">Lorem, ipsum. 3</option>
+                  </select>
+                </label>
+              </div>
+              <div class="md:col-span-2">
+                <label for="">
+                  <textarea
+                    type="text"
+                    class="h-24 w-full resize-none rounded-xl border-gray-200 px-4 py-3 placeholder:text-gray-200"
+                    placeholder="Nachricht"
+                    value=""
+                  ></textarea>
+                </label>
+              </div>
+            </div>
+            <div class="mb-6 flex items-center gap-2">
+              <label for="modal-checkbox">
+                <input type="checkbox" class="peer sr-only" id="modal-checkbox" />
+                <span class="block h-5 w-5 rounded-md border border-gray-200 peer-checked:bg-accent-600"></span>
+              </label>
+              <div class="inline-block">
+                <label class="inline-block" for="modal-checkbox">
+                  <p>Agree with</p>
+                </label>
+                <a href="#" class="link-hover text-accent-600">Terms of Service</a>
+              </div>
+            </div>
+          </form>
+
+          <div class="flex gap-2">
+            <button class="btn btn--disabled">Back</button>
+            <button class="btn btn--primary flex-1">Send</button>
+          </div>
         </div>
       </div>
     </div>
